@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["main","on_click_btn_run","page_with_inputs","print_greet_name","print_help","remove_downloading_message","upper_greet_name"],"mod":["lib_mod"]};
