@@ -328,7 +328,8 @@ fn task_commit_and_push(arg_2: Option<String>) {
 
     // If needed, ask to create a GitHub remote repository
     if !cgl::git_has_remote() || !cgl::git_has_upstream() {
-        let github_client = github_mod::GitHubClient::new_with_stored_secret_token();
+        let github_client = github_mod::GitHubClient::new_with_stored_secret_
+token();
         cgl::new_remote_github_repository(&github_client).unwrap();
         cgl::description_and_topics_to_github(&github_client);
     } else {

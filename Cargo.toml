@@ -1,5 +1,6 @@
 [package]
 name = "cargo_auto_template_new_wasm"
+# binary executable does not need to be SemVer, because nobody depends on it
 version = "0.0.2"
 authors = ["web_server_domain"]
 homepage = "https://web_server_domain"
@@ -18,6 +19,9 @@ publish = false
 crate-type = ["cdylib"]
 
 [dependencies]
+# SemVer rules: Major version zero (0.y.z) is for initial development. Anything MAY change at any time. The public API SHOULD NOT be considered stable.
+# WARNING: Although dependecies in Cargo.toml look like a specific version of the crate, they are just like a carret version (^x.y.z) and actually specify 
+# the minimum version and allow automatic SemVer compatible updates up to a MAJOR increment! Always check the true version with `cargo tree`!
 unwrap = "1.2.1"
 wasm-bindgen = "0.2.86"
 console_error_panic_hook = "0.1.7"
