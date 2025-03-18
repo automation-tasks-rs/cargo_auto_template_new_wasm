@@ -135,7 +135,7 @@ fn on_click_btn_run() {
         wsm::open_url_in_new_tab(&url);
     } else {
         // write on the same web page
-        wsm::set_html_element_inner_text("div_for_errors", &format!("Error: Both arguments are mandatory."));
+        wsm::set_html_element_inner_text("div_for_errors", "Error: Both arguments are mandatory.");
     }
 }
 
