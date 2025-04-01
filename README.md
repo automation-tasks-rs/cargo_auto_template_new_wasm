@@ -15,6 +15,9 @@
 
 [//]: # (auto_cargo_toml_to_md end)
 
+ ![logo](https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg)
+ this repo is part of the [automation_tasks_rs](https://github.com/automation-tasks-rs) project
+ 
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/blob/master/LICENSE)
 
 [//]: # (auto_lines_of_code start)
