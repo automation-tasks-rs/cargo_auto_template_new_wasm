@@ -7,17 +7,20 @@
 //! # cargo_auto_template_new_wasm
 //!
 //! **Template for a minimal wasm project for browser**  
-//! ***version: 0.0.4 date: 2025-03-18 author: [web_server_domain](https://web_server_domain) repository: [GitHub](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm)***
+//! ***version: 0.0.6 date: 2025-07-15 author: [web_server_domain](https://web_server_domain) repository: [GitHub](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm)***
 //!
 //!  ![maintained](https://img.shields.io/badge/maintained-green)
 //!  ![work-in-progress](https://img.shields.io/badge/work_in_progress-yellow)
 //!  ![rustlang](https://img.shields.io/badge/rustlang-orange)
 //!  ![wasm](https://img.shields.io/badge/wasm-orange)
 //!
+//!  ![logo](https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg)
+//!  this repo is part of the [automation_tasks_rs](https://github.com/automation-tasks-rs) project
+//!  
 //!   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/blob/master/LICENSE)
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-260-green.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-89-blue.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/)
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-263-green.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-92-blue.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/)
 //! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-71-purple.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-16-orange.svg)](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm/)

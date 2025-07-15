@@ -35,7 +35,7 @@ pub fn main() {
         // replace # with delimiter /
         location_hash_fragment.replace_range(..1, "/");
     }
-    let location_hash_fragment = format!("cargo_auto_template_new_wasm{}", location_hash_fragment);
+    let location_hash_fragment = format!("cargo_auto_template_new_wasm{location_hash_fragment}");
     dbg!(&location_hash_fragment);
     let args = location_hash_fragment.split("/");
     let args: Vec<&str> = args.collect();
@@ -69,7 +69,10 @@ pub fn main() {
                 None => wsm::set_html_element_inner_text("div_for_errors", "Error: Missing second argument for upper."),
             }
         }
-        _ => wsm::set_html_element_inner_text("div_for_errors", "Error: Unrecognized arguments. Try \n http://localhost:4000/cargo_auto_template_new_wasm#help"),
+        _ => wsm::set_html_element_inner_text(
+            "div_for_errors",
+            "Error: Unrecognized arguments. Try \n http://localhost:4000/cargo_auto_template_new_wasm#help",
+        ),
     }
 }
 
