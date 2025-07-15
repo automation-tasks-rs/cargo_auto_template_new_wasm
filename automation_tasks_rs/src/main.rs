@@ -250,34 +250,34 @@ fn task_publish_to_web() {
 
     // rsync to copy to server over ssh into a temporary installation folder
     cl::ShellCommandLimitedDoubleQuotesSanitizer::new(
-r#"rsync -e ssh -a --info=progress2 --delete-after "web_server_folder/{package_name}/" "{server_username}@{web_server_domain}:/var/www/transfer_folder/{package_name}" "#).unwrap_or_else(|e| panic!("{e}"))
+r#"rsync -e ssh -a --info=progress2 --delete-after "web_server_folder/{package_name}/" "{server__username}@{web__server__domain}:/var/www/transfer_folder/{package_name}" "#).unwrap_or_else(|e| panic!("{e}"))
     .arg("{package_name}", &cargo_toml.package_name()).unwrap_or_else(|e| panic!("{e}"))
-    .arg("{server_username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
-    .arg("{web_server_domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
+    .arg("{server__username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
+    .arg("{web__server__domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
     .run().unwrap_or_else(|e| panic!("{e}"));
 
     // rsync to copy to server over ssh the installation script
     cl::ShellCommandLimitedDoubleQuotesSanitizer::new(
-r#"rsync -e ssh -a --info=progress2 --delete-after "publish_script/{package_name}_publish.sh" "{server_username}@{web_server_domain}:/var/www/scripts/{package_name}/" "#).unwrap_or_else(|e| panic!("{e}"))
+r#"rsync -e ssh -a --info=progress2 --delete-after "publish_script/{package_name}_publish.sh" "{server__username}@{web__server__domain}:/var/www/scripts/{package_name}/" "#).unwrap_or_else(|e| panic!("{e}"))
     .arg("{package_name}", &cargo_toml.package_name()).unwrap_or_else(|e| panic!("{e}"))
-    .arg("{server_username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
-    .arg("{web_server_domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
+    .arg("{server__username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
+    .arg("{web__server__domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
     .run().unwrap_or_else(|e| panic!("{e}"));
 
     //make the bash script executable
     cl::ShellCommandLimitedDoubleQuotesSanitizer::new(
-r#"ssh "{server_username}@{web_server_domain}" chmod +x  "/var/www/scripts/{package_name}/{package_name}_publish.sh" "#).unwrap_or_else(|e| panic!("{e}"))
+r#"ssh "{server__username}@{web__server__domain}" chmod +x  "/var/www/scripts/{package_name}/{package_name}_publish.sh" "#).unwrap_or_else(|e| panic!("{e}"))
     .arg("{package_name}", &cargo_toml.package_name()).unwrap_or_else(|e| panic!("{e}"))
-    .arg("{server_username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
-    .arg("{web_server_domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
+    .arg("{server__username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
+    .arg("{web__server__domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
     .run().unwrap_or_else(|e| panic!("{e}"));
 
     // run installation script over ssh on the server to copy from the installation folder to production folder
     cl::ShellCommandLimitedDoubleQuotesSanitizer::new(
-r#"ssh "{server_username}@{web_server_domain}" "/var/www/scripts/{package_name}/{package_name}_publish.sh" "#).unwrap_or_else(|e| panic!("{e}"))
+r#"ssh "{server__username}@{web__server__domain}" "/var/www/scripts/{package_name}/{package_name}_publish.sh" "#).unwrap_or_else(|e| panic!("{e}"))
     .arg("{package_name}", &cargo_toml.package_name()).unwrap_or_else(|e| panic!("{e}"))
-    .arg("{server_username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
-    .arg("{web_server_domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
+    .arg("{server__username}", "server_username").unwrap_or_else(|e| panic!("{e}"))
+    .arg("{web__server__domain}", "web_server_domain").unwrap_or_else(|e| panic!("{e}"))    
     .run().unwrap_or_else(|e| panic!("{e}"));
 
     println!(
