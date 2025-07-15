@@ -7,7 +7,7 @@
 //! # cargo_auto_template_new_wasm
 //!
 //! **Template for a minimal wasm project for browser**  
-//! ***version: 0.0.6 date: 2025-07-15 author: [web_server_domain](https://web_server_domain) repository: [GitHub](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm)***
+//! ***version: 0.0.3 date: 2025-07-15 author: [web_server_domain](https://web_server_domain) repository: [GitHub](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm)***
 //!
 //!  ![maintained](https://img.shields.io/badge/maintained-green)
 //!  ![work-in-progress](https://img.shields.io/badge/work_in_progress-yellow)
@@ -73,8 +73,8 @@
 use wasm_bindgen::prelude::*;
 
 mod main_mod;
-pub use main_mod::wsm;
 pub use main_mod::LibraryError;
+pub use main_mod::wsm;
 
 #[wasm_bindgen(start)]
 /// To start the Wasm application, wasm_bindgen runs this functions

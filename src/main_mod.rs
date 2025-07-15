@@ -13,8 +13,8 @@ use unwrap::unwrap;
 use wasm_rs_dbg::dbg;
 
 mod lib_mod;
-pub use lib_mod::wsm;
 pub use lib_mod::LibraryError;
+pub use lib_mod::wsm;
 
 /// entry point just like for cli-bin-executable
 pub fn main() {

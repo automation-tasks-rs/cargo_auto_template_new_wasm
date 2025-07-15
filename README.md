@@ -6,7 +6,7 @@
 [//]: # (auto_cargo_toml_to_md start)
 
 **Template for a minimal wasm project for browser**  
-***version: 0.0.6 date: 2025-07-15 author: [web_server_domain](https://web_server_domain) repository: [GitHub](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm)***
+***version: 0.0.3 date: 2025-07-15 author: [web_server_domain](https://web_server_domain) repository: [GitHub](https://github.com/automation-tasks-rs/cargo_auto_template_new_wasm)***
 
  ![maintained](https://img.shields.io/badge/maintained-green)
  ![work-in-progress](https://img.shields.io/badge/work_in_progress-yellow)
