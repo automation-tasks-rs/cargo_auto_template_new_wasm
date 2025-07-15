@@ -10,7 +10,6 @@ mod encrypt_decrypt_with_ssh_key_mod;
 mod generic_functions_mod;
 mod tasks_mod;
 
-use cargo_auto_lib::ShellCommandLimitedDoubleQuotesSanitizerTrait;
 pub use cargo_auto_lib as cl;
 
 use crate::cargo_auto_github_api_mod as cgl;
@@ -22,6 +21,7 @@ pub use cl::{BLUE, GREEN, RED, RESET, YELLOW};
 
 // traits must be in scope (Rust strangeness)
 use cl::CargoTomlPublicApiMethods;
+use cl::ShellCommandLimitedDoubleQuotesSanitizerTrait;
 
 // region: library with basic automation tasks
 
