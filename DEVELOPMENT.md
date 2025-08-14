@@ -68,13 +68,17 @@ This template contains GitHub actions to build the project on commit and publish
 Cargo-auto will download the template release from:
 <https://github.com/automation-tasks-rs/cargo_auto_template_new_cli/releases/download/v1.0.0/template.tar.gz>
 
-To create this release use the commands:
+## Info just for me when I modify the template
+
+To create this release I use the commands:
 
 ```bash
-git archive -o template.tar HEAD
+mkdir -p tmp
+git archive -o tmp/template.tar HEAD
 # delete directory docs
-tar -vf template.tar --delete docs
-gzip template.tar
+tar -vf tmp/template.tar --delete docs
+gzip tmp/template.tar
 ```
 
-Then manually create a GitHub release and upload the tar.
+I cannot upload directly from inside the container. First I copy the file into some Windows folder.
+Then I manually create a GitHub release and upload the tar.
