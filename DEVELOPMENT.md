@@ -70,15 +70,12 @@ Cargo-auto will download the template release from:
 
 ## Info just for me when I modify the template
 
-To create this release I use the commands:
+To create this release use the commands:
 
 ```bash
-mkdir -p tmp
-git archive -o tmp/template.tar HEAD
-# delete directory docs
-tar -vf tmp/template.tar --delete docs
-gzip tmp/template.tar
+sh github_release_prepare.sh
 ```
 
-I cannot upload directly from inside the container. First I copy the file into some Windows folder.
-Then I manually create a GitHub release and upload the tar.
+I cannot upload directly from inside the container. First I copy the file into some Windows folder.  
+Then I manually create a GitHub release and upload the files.  
+Then remove the temporary files.
